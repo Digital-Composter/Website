@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import sideImg from '../../assets/488.jpg';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
-import { FcGoogle } from "react-icons/fc";
 
 function Regist() {
   const navigate = useNavigate();
 
-  const handleLoginMenu =()=> {
-    navigate ("/LoginPage")
-  }
 
   const [formData, setFormData] = useState({
     Email: '',
@@ -26,62 +21,54 @@ function Regist() {
     });
   };
 
-  const handleLogin = () => {
-    // Melakukan apa pun yang Anda inginkan dengan nilai-nilai tersebut, misalnya, mencetaknya
-    console.log("username:", formData.Username);
-    console.log("email:", formData.Email);
-    console.log("password:", formData.Password);
-
-    // Mereset nilai-nilai formulir
-    setFormData({
-      Email: '',
-      Password: '',
-      Username: ''
+  const handleSignUp = () => {
+    fetch('https://digicomp-a5ieh7r16-hiskandaryps-projects.vercel.app/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Registration successful:', data);
+      // Redirect user to dashboard or login page after successful registration
+      navigate('/Dashboard');
+    })
+    .catch(error => {
+      console.error('Error registering user:', error);
     });
   };
-  // google login
-  const handleGoogleLogin = () => {
-    const auth = getAuth();
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        console.info(result.user);
-        // Set isLoggedIn ke true setelah berhasil login
-        navigate('/Dashboard');
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
+
+
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden flex">
         <div className="p-4 w-full">
           <h1 className="text-2xl mb-4">Sign Up</h1>
           <div className="flex flex-col gap-4 justify-center">
-            <BoxForm label="Username" type="username" value={formData.Username} onChange={handleChange} />
+            <BoxForm label="Username" type="text" value={formData.Username} onChange={handleChange} />
             <BoxForm label="Email" type="email" value={formData.Email} onChange={handleChange} />
             <BoxForm label="Password" type="password" value={formData.Password} onChange={handleChange} />
           </div>
-          <div className="flex flex-col gap-2 py-2 justify-center">
-            <button className="bg-black hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500" onClick={handleLogin}>Sign Up</button>
-            <span className="text-center text-sm">or Sign Up with</span>
-            <button className="flex items-center justify-center bg-white border border-black hover:bg-red-600 text-black py-2 px-4 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-red-500"
-              onClick={handleGoogleLogin}>
-              <FcGoogle className="mr-2" />
-              Google
-            </button>
+          <div className="flex flex-col gap-4 py-8 justify-center">
+            <button className="bg-black hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500" onClick={handleSignUp}>Sign Up</button>
             <div className="flex flex-wrap gap-2 justify-center items-end"> {/* Mengatur tata letak ke kanan */}
-            <span className=" text-xs ">Have account ?</span> 
-           <a href="/LoginPage" className='text-xs text-sky-600'>Login</a> {/* Tautan untuk sign-up */}
-          </div>
+              <span className=" text-xs ">Have account ?</span> 
+              <a href="/LoginPage" className='text-xs text-sky-600'>Login</a> {/* Tautan untuk sign-up */}
+            </div>
           </div>
         </div>
         <img src={sideImg} alt="Login Image" className="h-full w-1/2 object-cover hidden md:block" /> {/* Menyembunyikan gambar saat tampilan ponsel */}
       </div>
     </div>
   );
-}
+} 
 
 const BoxForm = ({ label, type, value, onChange }) => {
   return (

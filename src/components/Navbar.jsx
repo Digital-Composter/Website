@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import logo from '../assets/three 1.png';
 import { FaBars, FaXmark } from "react-icons/fa6";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { Link } from 'react-scroll';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
     const [onMobile, setOnMobile] = useState(false);
@@ -11,16 +11,9 @@ export default function Navbar() {
         setOnMobile(!onMobile);
     }
 
-    const handleGoogleLogin = () => {
-        const auth = getAuth()
-        const provider = new GoogleAuthProvider()
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                console.info(result.user)
-            })
-            .catch((err) => {
-                console.info(err)
-            })
+    const navigate = useNavigate();
+    const handleSignUp =()=>{
+        navigate('/RegistPage');
     }
 
     const navItems = [
@@ -49,7 +42,7 @@ export default function Navbar() {
                     </div>
 
                     <div className='space-x-8 hidden pt-1 md:flex items-center'>
-                        <button className=' bg-third text-white rounded-md px-4 py-1 ml-4 transition-all duration-300 hover:text-black hover:bg-slate-500' type='button' onClick={handleGoogleLogin}>Sign Up</button>
+                        <button className=' bg-third text-white rounded-md px-4 py-1 ml-4 transition-all duration-300 hover:text-black hover:bg-slate-500' type='button' onClick={handleSignUp }>Sign Up</button>
                     </div>
                     {/*menu when display hidden (mobile)  */}
                     <div className='md:hidden'>

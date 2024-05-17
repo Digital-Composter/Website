@@ -2,16 +2,14 @@ import React, { useState } from 'react';
 
 const Slider = () => {
   return (
-    <>
-      <Parameter className='w-full' namaParameter="Suhu" />
+    <div className="flex flex-col items-center justify-center"> {/* Menggunakan flexbox untuk mengatur posisi */}
+      <Parameter className='' namaParameter="Suhu" />
       <Parameter namaParameter="Kelembapan" />
       <Parameter namaParameter="pH" />
-      <div className="flex flex-col items-center justify-center">
-        <button className='bg-blue-500 text-white rounded-md px-4 py-2 mt-4' onClick={handleSubmit}>
-          Submit
-        </button>
-      </div>
-    </>
+      <button className='bg-blue-500 text-white rounded-md px-4 py-2 mt-4' onClick={handleSubmit}>
+        Submit
+      </button>
+    </div>
   );
 };
 
@@ -23,7 +21,7 @@ const Parameter = ({ namaParameter }) => {
   };
 
   return (
-    <div className="flex items-center justify-center flex-col"> 
+    <div className="flex flex-col"> 
       <span className="text-lg text-gray-500 mb-4">{namaParameter}</span> 
       <div className="flex items-center justify-between w-1/4"> 
         <input
@@ -47,15 +45,7 @@ const Parameter = ({ namaParameter }) => {
 }
 
 const handleSubmit = () => {
-  // Menggunakan document.getElementsByName untuk mendapatkan nilai value dari setiap input hidden
-  const suhu = document.getElementsByName("Suhu")[0].value;
-  const kelembapan = document.getElementsByName("Kelembapan")[0].value;
-  const pH = document.getElementsByName("pH")[0].value;
-
-  // Melakukan apa pun yang Anda inginkan dengan nilai-nilai tersebut, misalnya, mencetaknya
-  console.log("Nilai Suhu:", suhu);
-  console.log("Nilai Kelembapan:", kelembapan);
-  console.log("Nilai pH:", pH);
+  // Handle submit logic
 };
 
 export default Slider;

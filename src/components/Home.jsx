@@ -1,6 +1,5 @@
 import sayur from '../assets/sayur.png';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -12,7 +11,7 @@ export default function Home() {
     navigate ('/RegistPage')
   }
   return (
-    <main className='pb-8'id='home'>
+    <main className='pb-12 'id='home'>
       <div className='flex items-center justify-center'>
         <div className='w-1/3 py-4 my-40 -ml-4'>
           <div className='flex flex-col items-center'>
@@ -24,7 +23,7 @@ export default function Home() {
                 onClick={handleLoginForm}>
                 Login
               </button>
-              <button className='bg-second text-white rounded-md px-6 py-1 mt-4 transition-all duration-300 hover:text-black hover:bg-slate-500' onClick={handleRegistForm}>Sign Up</button>
+              <button className='bg-second text-white rounded-md px-6 py-1 mt-4 transition-all duration-300 hover:text-black hover:bg-slate-500' type='button' onClick={handleRegistForm}>Sign Up</button>
             </div>
           </div>
         </div>
@@ -36,4 +35,4 @@ export default function Home() {
       </div>
     </main>
   );
-}
+  }
