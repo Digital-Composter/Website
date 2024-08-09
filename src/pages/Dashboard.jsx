@@ -8,7 +8,7 @@ export default function Dashboard() {
         <div className="bg-gray-50 min-h-screen">
             <HeaderDashboard/>
             <Display/>
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     );
 }
