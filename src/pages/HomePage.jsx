@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
+import Display from "../components/Display"
 
 export default function HomePage () {
     return (
@@ -13,6 +14,7 @@ export default function HomePage () {
             <Home/>
             <Carousel/>
             <Features/>
+            <Display/>
             <Team/>
             <Footer/>
             

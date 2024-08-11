@@ -1,15 +1,7 @@
+import { Link } from 'react-scroll'; // Import Link dari react-scroll
 import sayur from '../assets/sayur.png';
-import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
-  const navigate = useNavigate();
-
-  const handleLoginForm = () => {
-    navigate('/LoginPage');
-  };
-  const handleRegistForm = () => {
-    navigate('/RegistPage');
-  };
 
   return (
     <main className='pb-12' id='home'>
@@ -24,19 +16,19 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className='flex justify-center -mt-40 '>
+        <div className='flex justify-center -mt-40'>
+          <Link 
+            to='dashboard' 
+            spy={true} 
+            smooth={true} 
+            offset={-100} 
+          >
           <button
-            className='bg-primary text-white rounded-md px-10 py-2 mr-4 transition-all duration-300 hover:bg-hv1'
-            type='button'
-            onClick={handleLoginForm}>
-            Login
+            className='bg-green text-white text-lg font-semibold rounded-full px-10 py-3 mr-4 transition-all duration-300 hover:bg-green-600 hover:shadow-xl transform hover:scale-105 shadow-lg'
+            type='button'>
+            Dashboard
           </button>
-          <button
-            className='bg-second text-white rounded-md px-10 py-2 transition-all duration-300  hover:bg-yellow-800'
-            type='button'
-            onClick={handleRegistForm}>
-            Sign Up
-          </button>
+          </Link>
         </div>
       </div>
     </main>
