@@ -45,7 +45,7 @@ export default function Team() {
       <ul className="flex flex-wrap justify-center items-center">
         {TeamData?.map((team) => (
           <li key={team.Nama} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mx-4 mb-8">
-            <div className="border-2 border-emerald-500 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="border-2 border-emerald-500 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <img className='w-full h-2xl mx-auto rounded-full' src={team.image} alt={`${team.Nama}`} />
               <div className='text-center mt-4 text-slate-800 font-sans'>
                 <h2 className='text-xl font-bold'>
