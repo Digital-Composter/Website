@@ -9,7 +9,7 @@ import Regist from './components/account/Regist';
 function App() {
     return (
 
-        <Router>
+        <Router >
             <Routes>
                 <Route path='/' element={<HomePage />} />
                 {/* <Route element={<PrivateRoutes/>}>

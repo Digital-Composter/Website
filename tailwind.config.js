@@ -13,7 +13,8 @@ export default {
         alt:'#a0a0a0',
         hv1:'#1b9657',
         hv2:'#3fcf8e',
-        green: '#37996b'
+        green: '#37996b',
+        card: '#fffdf7'
       },
       spacing: {
         '34': '8.5rem' /* 136px */,

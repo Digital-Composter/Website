@@ -19,7 +19,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className='bg-white pl-10 md:px-18 p-4 max-w-screen-2xl mx-auto sticky top-0 left-0 right-0 z-50 border-b-2 border-emerald-300'>
+            <nav className='bg-green pl-10 md:px-18 p-4 max-w-screen-2xl mx-auto sticky top-0 left-0 right-0 z-50 border-b-2'>
                 <div className='text-lg container mx-auto flex justify-between items-center font-medium'>
                     <div className='flex space-x-12 items-center'>
                         <div className='flex items-center space-x-3'>
@@ -31,7 +31,7 @@ export default function Navbar() {
                             />
                             <Link 
                                 to="home" 
-                                className='text-2xl font-semibold font-sans text-third cursor-pointer'
+                                className='text-2xl font-semibold font-sans text-white cursor-pointer hover:text-green'
                                 spy={true} 
                                 smooth={true} 
                                 offset={-100}
@@ -49,7 +49,7 @@ export default function Navbar() {
                                     spy={true} 
                                     smooth={true} 
                                     offset={-100} 
-                                    className='text-third block hover:text-green-500 cursor-pointer'
+                                    className='text-white hover:text-green cursor-pointer transition duration-300 ease-in-out'
                                 >
                                     {link}
                                 </Link>
@@ -74,7 +74,7 @@ export default function Navbar() {
                         spy={true} 
                         smooth={true} 
                         offset={-100} 
-                        className='block text-white hover:text-green-500 text-xl' 
+                        className='block text-white hover:text-green text-xl transition duration-300 ease-in-out' 
                         onClick={toggleMenu}
                     >
                         {link}
