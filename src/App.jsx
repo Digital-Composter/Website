@@ -2,8 +2,6 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Menggunakan Routes dan Route
 import HomePage from './pages/HomePage';
-import LoginPage from './pages/LoginPage';
-import Regist from './components/account/Regist';
 // import PrivateRoutes from './components/PrivateRoutes';
 
 function App() {

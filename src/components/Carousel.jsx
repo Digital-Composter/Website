@@ -5,7 +5,6 @@ import alat1 from '../assets/alat1.jpg';
 import alat2 from '../assets/alat2.jpg';
 import alat3 from '../assets/alat3.jpg';
 import alat4 from '../assets/alat4.jpg';
-import daun from '../assets/daun.jpg';
 
 const Carousel = () => {
   const slides = [
@@ -20,9 +19,6 @@ const Carousel = () => {
     },
     {
       img: alat4, // Placeholder image for empty slides
-    },
-    {
-      img: daun, // Placeholder image for empty slides
     },
   ];
 

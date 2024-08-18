@@ -41,7 +41,7 @@ const TeamData = [
 
 export default function Team() {
   return (
-    <section className='pt-28 sm: pt-40 ' id='team'>
+    <section className='pt-50 my-5 mt-56 ' id='team'>
       <ul className="flex flex-wrap justify-center items-center">
         {TeamData?.map((team) => (
           <li key={team.Nama} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mx-4 mb-8">

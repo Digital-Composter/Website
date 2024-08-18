@@ -24,14 +24,14 @@ export default function Features() {
               <div className='bg-card rounded-[35px] h-96 shadow-xl p-8 items-center flex justify-center items-center hover:-translate-y-4 transition-all duration-300 md:mt-16'>
                 <div>
                   <img src={efisien} alt="" />
-                  <h5 className='text-2xl font-semibold text-emerald- px-5 text-center'> Efficiency</h5>
+                  <h5 className='text-2xl font-semibold text-black px-5 text-center'> Efficiency</h5>
                 </div>
               </div>
 
               <div className='bg-card rounded-[35px] h-96 shadow-xl p-8 items-center flex justify-center items-center hover:-translate-y-4 transition-all duration-300'>
                 <div>
                   <img src={control} alt="" />
-                  <h5 className='text-2xl font-semibold text-emerald- px-5 text-center'> Control</h5>
+                  <h5 className='text-2xl font-semibold text-black px-5 text-center'> Control</h5>
                 </div>
               </div>
             </div>
