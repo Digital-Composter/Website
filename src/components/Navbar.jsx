@@ -21,8 +21,8 @@ export default function Navbar() {
         <>
             <nav className='bg-green w-full p-4 sticky top-0 left-0 right-0 z-50 border-b-2'>
                 <div className='flex justify-between items-center font-medium w-full'>
-                    <div className='flex space-x-12 items-center'>
-                        <div className='flex items-center space-x-3'>
+                    <div className='flex space-x-12 items-center gap-2 text-lg'>
+                        <div className='flex items-center space-x-3 pl-10 gap-6'>
                             <img 
                                 src={logo} 
                                 alt="logo" 
@@ -31,7 +31,7 @@ export default function Navbar() {
                             />
                             <Link 
                                 to="home" 
-                                className='text-2xl font-semibold font-sans text-white cursor-pointer hover:text-green'
+                                className='text-2xl  pb-1 font-semibold font-sans text-white cursor-pointer '
                                 spy={true} 
                                 smooth={true} 
                                 offset={-100}
@@ -49,7 +49,7 @@ export default function Navbar() {
                                     spy={true} 
                                     smooth={true} 
                                     offset={-100} 
-                                    className='text-white hover:text-green cursor-pointer transition duration-300 ease-in-out'
+                                    className='text-white hover:underline cursor-pointer transition duration-500 ease-in-out'
                                 >
                                     {link}
                                 </Link>
