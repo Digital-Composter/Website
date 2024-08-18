@@ -33,8 +33,6 @@ export default function SimpleLineChart() {
       setTemperature(realtimeData.data[0].temp);
       setHumidity(realtimeData.data[0].moist);
       setPh(realtimeData.data[0].ph);
-      setHambiance(realtimeData.data[0].humid_ambiance);
-      setTempAmbiance(realtimeData.data[0].temp_ambiance);
       setPhase(realtimeData.data[0].phase);
     })
     .catch(error => {
