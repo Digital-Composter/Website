@@ -30,11 +30,12 @@ export default function SimpleLineChart() {
       return response.json();
     })
     .then(realtimeData => {
-      setTemperature(realtimeData.data[0].temp);
-      setHumidity(realtimeData.data[0].moist);
-      setPh(realtimeData.data[0].ph);
-      setPhase(realtimeData.data[0].phase);
+      setTemperature(realtimeData.data[0].temp ?? '--');
+      setHumidity(realtimeData.data[0].moist ?? '--');
+      setPh(realtimeData.data[0].ph ?? '--');
+      setPhase(realtimeData.data[0].phase ?? '--');
     })
+    
     .catch(error => {
       console.error('There was an error with the fetch operation:', error);
     });

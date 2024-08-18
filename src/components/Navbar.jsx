@@ -19,14 +19,14 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className='bg-green pl-10 md:px-18 p-4 max-w-screen-2xl mx-auto sticky top-0 left-0 right-0 z-50 border-b-2'>
-                <div className='text-lg container mx-auto flex justify-between items-center font-medium'>
+            <nav className='bg-green w-full p-4 sticky top-0 left-0 right-0 z-50 border-b-2'>
+                <div className='flex justify-between items-center font-medium w-full'>
                     <div className='flex space-x-12 items-center'>
                         <div className='flex items-center space-x-3'>
                             <img 
                                 src={logo} 
                                 alt="logo" 
-                                className='w-10 inline-block items-center mx-4 cursor-pointer' 
+                                className='w-10 inline-block items-center cursor-pointer' 
                                 onClick={() => navigate('/')} // Navigasi ke halaman home
                             />
                             <Link 
