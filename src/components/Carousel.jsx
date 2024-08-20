@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
-import alat1 from '../assets/alat1-min.avif';
-import alat2 from '../assets/alat2-min.avif';
-import alat3 from '../assets/alat3-min.avif';
-import alat4 from '../assets/alat4-min.avif';
+import alat1 from '../assets/alat1-min.jpg';
+import alat2 from '../assets/alat2-min.jpg';
+import alat3 from '../assets/alat3-min.jpg';
+import alat4 from '../assets/alat4-min.jpg';
 
 const Carousel = () => {
   const slides = [
