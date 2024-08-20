@@ -8,18 +8,10 @@ import alat4 from '../assets/alat4-min.jpg';
 
 const Carousel = () => {
   const slides = [
-    {
-      img: alat3, // Placeholder image for empty slides
-    },
-    {
-      img: alat1,
-    },
-    {
-      img: alat2,
-    },
-    {
-      img: alat4, // Placeholder image for empty slides
-    },
+    { img: alat3 }, // First slide image
+    { img: alat1 }, // Second slide image
+    { img: alat2 }, // Third slide image
+    { img: alat4 }, // Fourth slide image
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,16 +33,20 @@ const Carousel = () => {
   };
 
   useEffect(() => {
-    const autoSlide = setInterval(nextSlide, 4000); // Ganti slide setiap 4 detik
-    return () => clearInterval(autoSlide); // Bersihkan interval saat komponen di-unmount
+    const autoSlide = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+    return () => clearInterval(autoSlide); // Clean up interval on component unmount
   }, [currentIndex]);
 
   return (
     <section className='mt-3' id='carousel'>
       <div className='max-w-[1300px] h-[720px] w-full m-auto py-16 px-4 relative group'>
         <div
-          style={{ backgroundImage: `url(${slides[currentIndex].img})` }} // Changed 'url' to 'img'
-          className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+          style={{
+            backgroundImage: `url(${slides[currentIndex].img})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+          className='w-full h-full rounded-2xl duration-500'
         ></div>
         {/* Left Arrow */}
         <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
