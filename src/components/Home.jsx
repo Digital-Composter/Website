@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll'; // Import Link dari react-scroll
-import sayur from '../assets/sayur.png';
+import sayur from '../assets/sayur-min.png';
 
 export default function Home() {
 

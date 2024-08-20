@@ -1,8 +1,8 @@
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
-import irgiImage from '../../assets/IrgiF.png'
-import azkaImage from '../../assets/azka.png'
-import hariImage from '../../assets/hari (2).png'
-import dimasImage from '../../assets/dimas.png'
+import irgiImage from '../../assets/IrgiF-min.png'
+import azkaImage from '../../assets/azka-min.png'
+import hariImage from '../../assets/hari (2)-min.png'
+import dimasImage from '../../assets/dimas-min.png'
 
 const TeamData = [
   {

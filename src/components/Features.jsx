@@ -1,6 +1,6 @@
-import otomatis from '../assets/automations.png';
-import efisien from '../assets/efficien.png';
-import control from '../assets/control.png';
+import otomatis from '../assets/automations-min.png';
+import efisien from '../assets/efficien-min.png';
+import control from '../assets/control-min.png';
 
 export default function Features() {
   return (
