@@ -1,5 +1,4 @@
 import { Link } from 'react-scroll'; // Import Link dari react-scroll
-import sayur from '../assets/sayur-min.png';
 
 export default function Home() {
 
@@ -10,7 +9,7 @@ export default function Home() {
           <div className='flex flex-col items-center'>
             <h2 className='text-6xl text-center text-primary font-landingpage '>Save The Waste For the Earth</h2>
             <img
-              src={sayur}
+              src={"https://storage.googleapis.com/dicompos-assets/assets/sayur-min.png"}
               alt='sayur'
               className='w-1/3 -mt-12 hidden sm:block' // Hide on mobile, show on small screens and larger
             />

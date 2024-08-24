@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from '../assets/three 1-min.png';
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { Link } from 'react-scroll';
 
@@ -24,7 +23,7 @@ export default function Navbar() {
                     <div className='flex space-x-12 items-center gap-2 text-lg'>
                         <div className='flex items-center space-x-3 pl-10 gap-6'>
                             <img 
-                                src={logo} 
+                                src={'https://storage.googleapis.com/dicompos-assets/assets/three%201-min.png'} 
                                 alt="logo" 
                                 className='w-10 inline-block items-center cursor-pointer' 
                                 onClick={() => navigate('/')} // Navigasi ke halaman home

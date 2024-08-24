@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
-import alat1 from '../assets/alat1-min.jpg';
-import alat2 from '../assets/alat2-min.jpg';
-import alat3 from '../assets/alat3-min.jpg';
-import alat4 from '../assets/alat4-min.jpg';
 
 const Carousel = () => {
   const slides = [
-    { img: alat3 }, // First slide image
-    { img: alat1 }, // Second slide image
-    { img: alat2 }, // Third slide image
-    { img: alat4 }, // Fourth slide image
+    { url: "https://storage.googleapis.com/dicompos-assets/assets/alat3-min.jpg" }, // First slide image
+    { url: 'https://storage.googleapis.com/dicompos-assets/assets/alat1-min.jpg' }, // Second slide image
+    { url: "https://storage.googleapis.com/dicompos-assets/assets/alat2-min.jpg" }, // Third slide image
+    { url: "https://storage.googleapis.com/dicompos-assets/assets/alat4-min.jpg" }, // Fourth slide image
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,7 +38,7 @@ const Carousel = () => {
       <div className='max-w-[1300px] h-[720px] w-full m-auto py-16 px-4 relative group'>
         <div
           style={{
-            backgroundImage: `url(${slides[currentIndex].img})`,
+            backgroundImage: `url(${slides[currentIndex].url})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

@@ -1,22 +1,18 @@
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
-import irgiImage from '../../assets/IrgiF-min.png'
-import azkaImage from '../../assets/azka-min.png'
-import hariImage from '../../assets/hari (2)-min.png'
-import dimasImage from '../../assets/dimas-min.png'
 
 const TeamData = [
   {
     Nama: 'Hari Iskandar',
     Universitas: 'Telkom University',
-    image: hariImage,
-    link: ' https://www.linkedin.com/in/hskndr/',
-    git: ' https://github.com/hiskandaryps',
+    image: 'https://storage.googleapis.com/dicompos-assets/assets/hari%20(2)-min.png',
+    link: 'https://www.linkedin.com/in/hskndr/',
+    git: 'https://github.com/hiskandaryps',
     ig: 'https://www.instagram.com/hiskandaryapis/'
   },
   {
     Nama: 'Irgi Faisal',
     Universitas: 'Telkom University',
-    image: irgiImage,
+    image: 'https://storage.googleapis.com/dicompos-assets/assets/IrgiF-min.png',
     link: 'https://www.linkedin.com/in/irgi-faisal-03507527a/',
     git: 'https://github.com/Irgii17',
     ig: 'https://www.instagram.com/irgifaisall'
@@ -24,7 +20,7 @@ const TeamData = [
   {
     Nama: 'Azka Hafizh',
     Universitas: 'Telkom University',
-    image: azkaImage,
+    image: 'https://storage.googleapis.com/dicompos-assets/assets/azka-min.png',
     link: 'https://www.linkedin.com/in/azka-hafizh-7423971b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     git: 'https://github.com/',
     ig: 'https://www.instagram.com/mg_azkahafizh'
@@ -32,7 +28,7 @@ const TeamData = [
   {
     Nama: 'Gamara Dimas',
     Universitas: 'Telkom University',
-    image: dimasImage,
+    image: 'https://storage.googleapis.com/dicompos-assets/assets/dimas-min.png',
     link: 'https://www.linkedin.com/',
     git: 'https://github.com',
     ig: 'https://www.instagram.com/'

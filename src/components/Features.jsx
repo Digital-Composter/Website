@@ -1,6 +1,4 @@
-import otomatis from '../assets/automations-min.png';
-import efisien from '../assets/efficien-min.png';
-import control from '../assets/control-min.png';
+import React from 'react';
 
 export default function Features() {
   return (
@@ -16,22 +14,22 @@ export default function Features() {
             <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-start md:gap-12 gap-8">
               <div className='bg-card text-white rounded-[35px] h-96 shadow-xl p-8 items-center flex justify-center items-center hover:-translate-y-4 transition-all duration-300'>
                 <div>
-                  <img src={otomatis} alt="" />
+                  <img src="https://storage.googleapis.com/dicompos-assets/assets/automations-min.png" alt="Automation" />
                   <h5 className='text-2xl font-semibold text-black px-5 text-center'>Automation</h5>
                 </div>
               </div>
 
               <div className='bg-card rounded-[35px] h-96 shadow-xl p-8 items-center flex justify-center items-center hover:-translate-y-4 transition-all duration-300 md:mt-16'>
                 <div>
-                  <img src={efisien} alt="" />
-                  <h5 className='text-2xl font-semibold text-black px-5 text-center'> Efficiency</h5>
+                  <img src="https://storage.googleapis.com/dicompos-assets/assets/efficien-min.png" alt="Efficiency" />
+                  <h5 className='text-2xl font-semibold text-black px-5 text-center'>Efficiency</h5>
                 </div>
               </div>
 
               <div className='bg-card rounded-[35px] h-96 shadow-xl p-8 items-center flex justify-center items-center hover:-translate-y-4 transition-all duration-300'>
                 <div>
-                  <img src={control} alt="" />
-                  <h5 className='text-2xl font-semibold text-black px-5 text-center'> Control</h5>
+                  <img src="https://storage.googleapis.com/dicompos-assets/assets/control-min.png" alt="Control" />
+                  <h5 className='text-2xl font-semibold text-black px-5 text-center'>Control</h5>
                 </div>
               </div>
             </div>
